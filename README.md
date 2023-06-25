@@ -1,6 +1,12 @@
 # eslint-plugin-textlint
 
-Enable textlint in eslint
+## Introduction
+
+Enable textlint in eslint.
+
+If there are any advices or questions, [submit issue](https://github.com/fengma1992/eslint-plugin-textlint/issues/new).
+
+[中文版 README](https://github.com/fengma1992/eslint-plugin-textlint/blob/master/README_ZH.md)
 
 ## Installation
 
@@ -50,7 +56,6 @@ This rule has a string option:
 | `"comment"` | inspect only comments                               |                
 | `"code"`    | inspect only codes (strings and templates in codes) |                   
 
-
 ### `.textlintrc` configuration
 
 1. Add `"@textlint/text": true` to the plugins section of your `.textlintrc` configuration file.
@@ -75,8 +80,6 @@ This rule has a string option:
 ```
 
 ## Rules
-
-<!-- begin auto-generated rules list -->
 
 🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
 

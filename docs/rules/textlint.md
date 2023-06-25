@@ -18,7 +18,6 @@ This rule has a string option:
 | `"comment"` | inspect only comments                               |                
 | `"code"`    | inspect only codes (strings and templates in codes) |                   
 
-
 ## When Not To Use It
 
 Give a short description of when it would be appropriate to turn off this rule.

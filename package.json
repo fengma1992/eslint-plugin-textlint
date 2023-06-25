@@ -1,11 +1,12 @@
 {
   "name": "eslint-plugin-textlint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Enable textlint in eslint",
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "textlint"
   ],
   "author": "dujianhao",
   "repository": "https://github.com/fengma1992/eslint-plugin-textlint",
