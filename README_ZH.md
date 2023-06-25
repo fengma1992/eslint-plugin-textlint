@@ -70,7 +70,7 @@ npm install eslint-plugin-textlint --save-dev
 
 ```json
 {
-  rules: {
+  "rules": {
     // 你需要的规则
   }
 }

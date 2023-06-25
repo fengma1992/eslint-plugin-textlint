@@ -72,7 +72,7 @@ This rule has a string option:
 
 ```json
 {
-  rules: {
+  "rules": {
     // whatever you want
   }
 }
