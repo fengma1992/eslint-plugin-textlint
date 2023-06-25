@@ -35,7 +35,7 @@ npm install eslint-plugin-textlint --save-dev
 ```json
 {
     "rules": {
-        "textlint/textlint": [2, 'all']
+        "textlint/textlint": [2, "all"]
     }
 }
 ```
