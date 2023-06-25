@@ -12,9 +12,12 @@ Your project should have a textlintrc file and this rule will depend on it.
 
 This rule has a string option:
 
-* `"all"` (default) inspect comments and codes
-* `"comment"` inspect only comments
-* `"code"` inspect only codes
+| option      | desc                                                |
+|-------------|-----------------------------------------------------|
+| `"all"`     | (default) inspect comments and codes                | 
+| `"comment"` | inspect only comments                               |                
+| `"code"`    | inspect only codes (strings and templates in codes) |                   
+
 
 ## When Not To Use It
 

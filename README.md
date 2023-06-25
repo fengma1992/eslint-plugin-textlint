@@ -35,10 +35,21 @@ npm install eslint-plugin-textlint --save-dev
 ```json
 {
     "rules": {
-        "textlint/textlint": 2
+        "textlint/textlint": [2, 'all']
     }
 }
 ```
+
+* rule: `textlint/textlint`
+
+This rule has a string option:
+
+| option      | desc                                                |
+|-------------|-----------------------------------------------------|
+| `"all"`     | (default) inspect comments and codes                | 
+| `"comment"` | inspect only comments                               |                
+| `"code"`    | inspect only codes (strings and templates in codes) |                   
+
 
 ### `.textlintrc` configuration
 
@@ -54,6 +65,15 @@ npm install eslint-plugin-textlint --save-dev
 
 2. Configure the rules you want to use under the rules section in `.textlintrc`.
 
+```json
+{
+  rules: {
+    // whatever you want
+  }
+}
+
+```
+
 ## Rules
 
 <!-- begin auto-generated rules list -->
@@ -61,5 +81,5 @@ npm install eslint-plugin-textlint --save-dev
 🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
 
 | Name                               | Description               | 🔧 |
-| :--------------------------------- | :------------------------ | :- |
+|:-----------------------------------|:--------------------------|:---|
 | [textlint](docs/rules/textlint.md) | Enable textlint in eslint | 🔧 |
