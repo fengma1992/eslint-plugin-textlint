@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-textlint",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Enable textlint in eslint",
   "keywords": [
     "eslint",
@@ -12,7 +12,7 @@
   "repository": "https://github.com/fengma1992/eslint-plugin-textlint",
   "main": "./lib/index.js",
   "files": [
-    "README.md",
+    "*.md",
     "docs",
     "lib"
   ],

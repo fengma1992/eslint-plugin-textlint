@@ -33,9 +33,21 @@ ruleTester.run('textlint', rule, {
   invalid: [
     {
       code: '// ecmaScript 测试注释1；',
-      errors: [{ message: 'Incorrect usage of the term: “ecmaScript”, use “ECMAScript” instead' }, { message: '中文与数字之间需要添加空格' }],
+      errors: [
+        { message: 'Incorrect usage of the term: “ecmaScript”, use “ECMAScript” instead' },
+        { message: '中文与数字之间需要添加空格' },
+      ],
       output: '// ECMAScript 测试注释 1；',
       options: ['comment'],
+    },
+    {
+      code: "const a = `ios${'android'} ${123 + '123' + \"456\"} iot`",
+      errors: [
+        { message: 'Incorrect usage of the term: “ios”, use “iOS” instead' },
+        { message: 'Incorrect usage of the term: “android”, use “Android” instead' },
+        { message: 'Incorrect usage of the term: “iot”, use “IoT” instead' },
+      ],
+      output: "const a = `iOS${'Android'} ${123 + '123' + \"456\"} IoT`",
     },
     {
       code: 'console.log("test测试") // 测试注释2；',
