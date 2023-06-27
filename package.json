@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-textlint",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Enable textlint in eslint",
   "keywords": [
     "eslint",
@@ -34,5 +34,6 @@
   "peerDependencies": {
     "eslint": ">=7"
   },
+  "readmeFilename": "README.md",
   "license": "MIT"
 }
