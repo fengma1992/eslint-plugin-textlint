@@ -87,3 +87,7 @@ npm install eslint-plugin-textlint --save-dev
 | 名称                                 | 描述                    | 🔧 |
 |:-----------------------------------|:----------------------|:---|
 | [textlint](docs/rules/textlint.md) | 在 eslint 中执行 textlint | 🔧 |
+
+## License
+
+`eslint-plugin-textlint` 使用 [MIT License](https://opensource.org/licenses/mit-license.php).

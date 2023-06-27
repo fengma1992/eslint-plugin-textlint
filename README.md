@@ -91,3 +91,7 @@ This rule has an object option:
 | Name                               | Description               | 🔧 |
 |:-----------------------------------|:--------------------------|:---|
 | [textlint](docs/rules/textlint.md) | Enable textlint in eslint | 🔧 |
+
+## License
+
+`eslint-plugin-textlint` is licensed under the [MIT License](https://opensource.org/licenses/mit-license.php).
