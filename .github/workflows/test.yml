@@ -16,9 +16,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install
-        run: npm install
+        run: pnpm install
       - uses: nick-fields/retry@v2
         with:
           timeout_minutes: 10
           max_attempts: 3
-          command: npm run test
+          command: pnpm run test
