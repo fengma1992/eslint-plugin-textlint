@@ -1,5 +1,8 @@
 # eslint-plugin-textlint
 
+[![npm](https://img.shields.io/npm/v/eslint-plugin-textlint.svg)](https://www.npmjs.com/package/eslint-plugin-textlint)
+[![test](https://github.com/fengma1992/eslint-plugin-textlint/actions/workflows/test.yml/badge.svg)](https://github.com/fengma1992/eslint-plugin-textlint/actions/workflows/test.yml)
+
 ## Introduction
 
 Enable textlint in eslint.
