@@ -41,20 +41,22 @@ npm install eslint-plugin-textlint --save-dev
 ```json
 {
     "rules": {
-        "textlint/textlint": [2, "all"]
+        "textlint/textlint": [2, { "lintType": "all", "ignoreImportDeclaration": true }]
     }
 }
 ```
 
-* rule: `textlint/textlint`
+#### rule: `textlint/textlint`
 
-This rule has a string option:
+This rule has an object option:
 
-| option      | desc                                                |
-|-------------|-----------------------------------------------------|
-| `"all"`     | (default) inspect comments and codes                | 
-| `"comment"` | inspect only comments                               |                
-| `"code"`    | inspect only codes (strings and templates in codes) |                   
+* `"lintType": "all" (default) | "comment" | "code"`
+    * `"all"`: (default) inspect comments and codes.
+    * `"comment"`: inspect only comments.
+    * `"code"`: inspect only codes (strings and templates in codes).
+* `"ignoreImportDeclaration": true (default) | false`
+    * `true`: ignore literal in import(ES Module) and require(CMD) statement.
+    * `false`: check literal in import(ES Module) and require(CMD) statement.
 
 ### `.textlintrc` configuration
 
@@ -70,7 +72,7 @@ This rule has a string option:
 
 2. Configure the rules you want to use under the rules section in `.textlintrc`.
 
-```json
+```js
 {
   "rules": {
     // whatever you want

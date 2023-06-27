@@ -39,20 +39,23 @@ npm install eslint-plugin-textlint --save-dev
 ```json
 {
     "rules": {
-        "textlint/textlint": [2, "all"]
+        "textlint/textlint": [2, { "lintType": "all", "ignoreImportDeclaration": true }]
     }
 }
 ```
 
-* rule: `textlint/textlint`
+#### rule: `textlint/textlint`
 
-此规则有一个配置项:
+此规则有一个对象配置项：
 
-| 配置          | 描述                    |
-|-------------|-----------------------|
-| `"all"`     | (默认) 检查注释和代码          | 
-| `"comment"` | 仅检查注释                 |                
-| `"code"`    | 仅检查代码 (代码内的字符串和模板字符串) |                   
+* `"lintType": "all" (默认) | "comment" | "code"`
+    * `"all"`: (默认) 检查注释和代码
+    * `"comment"`: 仅检查注释
+    * `"code"`: 仅检查代码 (代码内的字符串和模板字符串)
+* `"ignoreImportDeclaration": true (default) | false`
+    * `true`: 忽略 import 和 require 声明中的字符串
+    * `false`: 检查 import 和 require 声明中的字符串
+
 
 ### `.textlintrc` 配置
 
@@ -68,7 +71,7 @@ npm install eslint-plugin-textlint --save-dev
 
 2. 在 `.textlintrc` 的 rules 内配置你需要的 textlint 规则：
 
-```json
+```js
 {
   "rules": {
     // 你需要的规则

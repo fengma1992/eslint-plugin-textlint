@@ -27,31 +27,37 @@ const ruleTester = new RuleTester({
 })
 ruleTester.run('textlint', rule, {
   valid: [
-    // give me some code that won't trigger a warning
+    {
+      code: `import React from 'react'; console.log('测试');const a = '哈哈',b=window,c=1;`,
+      errors: [],
+    },
   ],
 
   invalid: [
     {
       code: '// ecmaScript 测试注释1；',
       errors: [
-        { message: 'Incorrect usage of the term: “ecmaScript”, use “ECMAScript” instead' },
-        { message: '中文与数字之间需要添加空格' },
+        { message: 'zh-technical-writing/terminology: Incorrect usage of the term: “ecmaScript”, use “ECMAScript” instead' },
+        { message: 'zh-technical-writing/zhRuleSeries: 中文与数字之间需要添加空格' },
       ],
       output: '// ECMAScript 测试注释 1；',
-      options: ['comment'],
+      options: [{ lintType: 'comment' }],
     },
     {
-      code: "const a = `ios${'android'} ${123 + '123' + \"456\"} iot`",
+      code: 'const a = `ios${\'android\'} ${123 + \'123\' + "456"} iot`',
       errors: [
-        { message: 'Incorrect usage of the term: “ios”, use “iOS” instead' },
-        { message: 'Incorrect usage of the term: “android”, use “Android” instead' },
-        { message: 'Incorrect usage of the term: “iot”, use “IoT” instead' },
+        { message: 'zh-technical-writing/terminology: Incorrect usage of the term: “ios”, use “iOS” instead' },
+        { message: 'zh-technical-writing/terminology: Incorrect usage of the term: “android”, use “Android” instead' },
+        { message: 'zh-technical-writing/terminology: Incorrect usage of the term: “iot”, use “IoT” instead' },
       ],
-      output: "const a = `iOS${'Android'} ${123 + '123' + \"456\"} IoT`",
+      output: 'const a = `iOS${\'Android\'} ${123 + \'123\' + "456"} IoT`',
     },
     {
       code: 'console.log("test测试") // 测试注释2；',
-      errors: [{ message: '中文与英文之间需要添加空格' }, { message: '中文与数字之间需要添加空格' }],
+      errors: [
+        { message: 'zh-technical-writing/zhRuleSeries: 中文与英文之间需要添加空格' },
+        { message: 'zh-technical-writing/zhRuleSeries: 中文与数字之间需要添加空格' },
+      ],
       output: 'console.log("test 测试") // 测试注释 2；',
     },
     {
@@ -60,12 +66,23 @@ ruleTester.run('textlint', rule, {
 *测试注释3；
 */
         `,
-      errors: [{ message: '中文与数字之间需要添加空格' }],
+      errors: [{ message: 'zh-technical-writing/zhRuleSeries: 中文与数字之间需要添加空格' }],
       output:
         `/**
 *测试注释 3；
 */
         `,
+    },
+    {
+      code: `import apis from 'apis';
+      const apis2 = require('apis');`,
+      errors: [
+        { message: 'zh-technical-writing/terminology: Incorrect usage of the term: “apis”, use “APIs” instead' },
+        { message: 'zh-technical-writing/terminology: Incorrect usage of the term: “apis”, use “APIs” instead' },
+      ],
+      options: [{ ignoreImportDeclaration: false }],
+      output: `import apis from 'APIs';
+      const apis2 = require('APIs');`
     },
   ],
 })
