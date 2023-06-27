@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-textlint",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Enable textlint in eslint",
   "keywords": [
     "eslint",
