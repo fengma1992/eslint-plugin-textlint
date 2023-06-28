@@ -84,10 +84,10 @@ npm install eslint-plugin-textlint --save-dev
 
 🔧 自动修复 [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
 
-| 名称                                 | 描述                    | 🔧 |
-|:-----------------------------------|:----------------------|:---|
-| [textlint](docs/rules/textlint.md) | 在 eslint 中执行 textlint | 🔧 |
+| 名称                                  | 描述                    | 🔧 |
+|:------------------------------------|:----------------------|:---|
+| [textlint](/docs/rules/textlint.md) | 在 eslint 中执行 textlint | 🔧 |
 
 ## License
 
-`eslint-plugin-textlint` 使用 [MIT License](https://opensource.org/licenses/mit-license.php).
+`eslint-plugin-textlint` 使用 [MIT License](https://github.com/fengma1992/eslint-plugin-textlint/blob/master/LICENSE).

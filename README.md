@@ -9,7 +9,7 @@ Enable textlint in eslint.
 
 If there are any advices or questions, [submit issue](https://github.com/fengma1992/eslint-plugin-textlint/issues/new).
 
-[中文版 README](https://github.com/fengma1992/eslint-plugin-textlint/blob/master/README_ZH.md)
+[中文版 README](https://github.com/fengma1992/eslint-plugin-textlint/blob/master/docs/README_ZH.md)
 
 ## Installation
 
@@ -94,4 +94,4 @@ This rule has an object option:
 
 ## License
 
-`eslint-plugin-textlint` is licensed under the [MIT License](https://opensource.org/licenses/mit-license.php).
+`eslint-plugin-textlint` is licensed under the [MIT License](https://github.com/fengma1992/eslint-plugin-textlint/blob/master/LICENSE).
